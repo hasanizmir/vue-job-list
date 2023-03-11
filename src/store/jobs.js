@@ -16,7 +16,7 @@ export default {
     async fetchJobs({ state, commit }) {
       if (state.jobs?.length > 0) return;
 
-      const jobs = await api.get("/jobs");
+      const jobs = await api.get("/jobs?sortBy=durationDay");
       commit("setJobs", jobs.data);
     },
   },
