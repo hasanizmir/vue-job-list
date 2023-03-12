@@ -1,4 +1,14 @@
-# job-list
+# Vue Job Search
+Search and listing jobs from API.
+
+Demo: https://vue-job-search.vercel.app/
+API: https://640ae4f465d3a01f980a1367.mockapi.io/api/v1/jobs
+
+
+- Vue
+- Vuex
+- SCSS with BEM
+- Axios
 
 ## Project setup
 ```
