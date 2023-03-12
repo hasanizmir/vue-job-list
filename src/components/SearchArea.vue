@@ -70,6 +70,8 @@ export default {
     padding: var(--space-xs) var(--space-lg);
     border-radius: var(--space-sm);
     color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-md);
     border: 3px solid var(--color-primary);
     transition: all 300ms ease-in-out;
 
