@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link>
-    <router-link to="/joblist">JobList</router-link>
+    <router-link to="/">Anasayfa</router-link>
+    <router-link to="/joblist">İş ilanları</router-link>
   </nav>
   <router-view />
 </template>

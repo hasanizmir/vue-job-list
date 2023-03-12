@@ -1,5 +1,6 @@
 <template>
   <div class="job-list">
+    <SearchArea />
     <JobItems v-if="filteredListings.length > 0" :jobs="paginatedListings" />
 
     <p v-else class="job-list__empty">Sonuç bulunamadı!</p>
@@ -17,12 +18,14 @@
 import { mapGetters } from "vuex";
 import JobItems from "@/components/JobItems.vue";
 import Pagination from "@/components/Pagination.vue";
+import SearchArea from "@/components/SearchArea.vue";
 
 export default {
   name: "JobList",
   components: {
     JobItems,
     Pagination,
+    SearchArea,
   },
   data() {
     return {
@@ -92,6 +95,14 @@ export default {
     font-weight: var(--font-weight-semibold);
     margin-top: var(--space-md);
     text-align: center;
+  }
+
+  ::v-deep .search {
+    padding-bottom: var(--space-md);
+
+    &__input {
+      padding: var(--space-xs);
+    }
   }
 }
 </style>

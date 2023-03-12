@@ -1,7 +1,7 @@
 <template>
   <div class="job-items">
-    <h2 class="job-items__header">{{ title }}</h2>
-    <div v-if="!jobs.length" class="flex items-center justify-center">
+    <h2 v-if="title" class="job-items__header">{{ title }}</h2>
+    <div v-if="!jobs.length" class="job-items__loader">
       <img src="../assets/loader.svg" />
       <p>Loading...</p>
     </div>
@@ -38,6 +38,12 @@ export default {
     font-weight: var(--font-weight-semibold);
     margin: var(--space-sm) auto;
     padding: var(--space-md);
+  }
+
+  &__loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 </style>

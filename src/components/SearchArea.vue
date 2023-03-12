@@ -16,7 +16,7 @@
       required
       class="search__input"
     />
-    <button class="search__button" @click="search">Search</button>
+    <button class="search__button" @click="search">Ara</button>
   </div>
 </template>
 <script>
