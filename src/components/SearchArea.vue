@@ -4,12 +4,14 @@
       type="text"
       v-model="searchTerm"
       placeholder="Pozisyon veya şirket adı"
+      name="keyword"
       required
       class="search__input"
     />
     <input
       type="text"
       v-model="location"
+      name="city"
       placeholder="Şehir veya ilçe"
       required
       class="search__input"
