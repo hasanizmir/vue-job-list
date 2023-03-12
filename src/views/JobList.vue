@@ -93,29 +93,5 @@ export default {
     margin-top: var(--space-md);
     text-align: center;
   }
-
-  &__nav {
-    ul {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: var(--space-md);
-
-      li {
-        font-size: var(--font-size-base);
-        font-weight: var(--font-weight-semibold);
-        color: var(--color-primary);
-        cursor: pointer;
-        border: 2px solid var(--color-primary);
-        padding: var(--space-2xs) var(--space-sm);
-      }
-
-      .active {
-        color: var(--color-white);
-        background: var(--color-primary);
-      }
-    }
-  }
 }
 </style>
