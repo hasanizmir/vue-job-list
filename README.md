@@ -1,7 +1,9 @@
 # Vue Job Search
-Search and listing jobs from API.
+Job search application through an API.
+
 
 Demo: https://vue-job-search.vercel.app/
+<br />
 API: https://640ae4f465d3a01f980a1367.mockapi.io/api/v1/jobs
 
 
