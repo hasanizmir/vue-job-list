@@ -11,6 +11,9 @@ export default {
     setJob(state, job) {
       state.job = job;
     },
+    resetJob(state) {
+      state.job = [];
+    },
   },
   actions: {
     async fetchJob({ state, commit }, id) {
@@ -18,6 +21,9 @@ export default {
 
       const job = await api.get(`/jobs/${id}`);
       commit("setJob", job.data);
+    },
+    resetJob({ commit }) {
+      commit("resetJob");
     },
   },
   namespaced: true,

@@ -1,6 +1,6 @@
 <template>
   <div class="job-detail">
-    <div class="job-detail__container">
+    <div v-if="job && job.positionName" class="job-detail__container">
       <div class="job-detail__top">
         <div class="job-detail__info">
           <h3>{{ job.positionName }}</h3>
@@ -48,6 +48,10 @@
         <p>{{ job.address }}</p>
       </div>
     </div>
+    <div v-else class="job-detail__loader">
+      <img src="../assets/loader.svg" />
+      <p>Loading...</p>
+    </div>
   </div>
 </template>
 
@@ -64,6 +68,9 @@ export default {
   },
   created() {
     this.fetchJob();
+  },
+  unmounted() {
+    this.$store.dispatch("jobDetail/resetJob");
   },
   methods: {
     fetchJob() {
@@ -164,6 +171,12 @@ export default {
     p {
       margin-bottom: var(--space-md);
     }
+  }
+
+  &__loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 </style>
